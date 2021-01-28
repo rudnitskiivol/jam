@@ -21,6 +21,14 @@ if (mix.inProduction()) {
  | file for your application, as well as bundling up your JS files.
  |
  */
+mix.inProduction() ? mix.options({
+  postCss: [
+    require('autoprefixer')({
+      browsers: ['ie >= 10', 'last 4 version'],
+    })
+  ]
+}) : '';
+
 
 mix
   .setResourceRoot('/public/')
@@ -58,3 +66,5 @@ mix.webpackConfig({
     ]
   }
 });
+
+
