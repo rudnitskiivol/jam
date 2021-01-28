@@ -29,12 +29,12 @@ body {
 
 .container {
   max-width: 1170px;
-  padding: 0 15px;
+  padding: 0 $container-padding;
   margin: 0 auto;
 }
 
 .separator {
-  padding: 100px 0;
+  padding: $sp-v-l 0;
   border-bottom: $border-light;
   &:last-of-type {
     border-bottom: 0;
@@ -49,7 +49,7 @@ body {
   color: $prime-color;
   text-decoration: none;
   display: inline-block;
-  padding-bottom: 30px;
+  padding-bottom: $sp-v * 1.5;
   opacity: 1;
   position: relative;
   transition: opacity 1s 0.3s;
@@ -87,6 +87,15 @@ body {
   }
 }
 
+@keyframes animate-left-header {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(-90px);
+  }
+}
+
 h1, h2 {
   font-size: $header-font-size;
   line-height: $header-line-height;
@@ -97,6 +106,18 @@ h1, h2 {
   font-weight: 800;
   letter-spacing: -0.04em;
   position: relative;
+  &.animated_scroll {
+    left: -100%;
+    transition: left 1s ease-in-out;
+  }
+  &.scroller-self {
+    cursor: pointer;
+    &:hover {
+      &:before {
+        animation: animate-left-header 0.5s infinite alternate-reverse;
+      }
+    }
+  }
   &:before {
     content: "";
     background-image: url(/public/images/heading-arrow.svg?24deeaa…);
@@ -130,13 +151,17 @@ h3, h4, h5, h6 {
   font-family: 'Spectral', serif;
   font-weight: 600;
   color: $sub-color;
-  padding: 0px 50px;
+  padding: 0px $sp-v * 2.5;
 }
 
 .banner-image {
   width: 100%;
   border-radius: 40px;
   margin-bottom: $sp-v-l;
+  &.animated_scroll {
+    opacity: 0;
+    transition: opacity 1s ease-in-out 0.2s;
+  }
 }
 
 .numbers {
@@ -146,12 +171,20 @@ h3, h4, h5, h6 {
   &__item {
     flex: 0 0 34%;
     width: 34%;
-    margin-bottom: 60px;
+    margin-bottom: $sp-v-m;
+    &.animated_scroll {
+      transition: opacity 1.2s ease-in-out 0.1s;
+      opacity: 0;
+    }
+    &.animated_scroll:nth-of-type(even) {
+      transition: opacity 1.2s ease-in-out 0.4s;
+      opacity: 0;
+    }
   }
   &__number {
     text-align: left;
     padding: 0;
-    margin-bottom: 40px;
+    margin-bottom: $sp-v-s;
     font-weight: 800;
   }
 }

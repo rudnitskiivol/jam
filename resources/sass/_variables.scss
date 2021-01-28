@@ -7,6 +7,8 @@ $background-second-color: #F1F1F1;
 
 $hover-opacity: 0.7;
 
+$container-padding: 15px;
+
 $border-light: 1px solid #B5B5B5;
 
 $sp-v: 20px;
@@ -21,3 +23,26 @@ $header-line-height: $header-font-size + $line-height-add;
 
 $font-size: 22px;
 $line-height: $font-size + $line-height-add;
+
+//tablets
+$container-padding-tablet: 25px;
+$header-font-size-tablet: 50px;
+$header-line-height-tablet: $header-font-size-tablet + $line-height-add;
+$font-size-tablet: 20px;
+$sp-v-tablet: 15px;
+$sp-v-s-tablet: $sp-v-tablet * 2;
+$sp-v-m-tablet: $sp-v-tablet * 3;
+$sp-v-h-tablet: $sp-v-tablet * 4;
+$sp-v-l-tablet: $sp-v-tablet * 5;
+
+//mobile
+$header-font-size-mobile: 42px;
+$line-height-add-mobile: 6px;
+$header-line-height-mobile: $header-font-size-mobile + $line-height-add-mobile;
+$font-size-mobile: 18px;
+$line-height-mobile: $font-size-mobile + $line-height-add-mobile;
+$sp-v-mobile: 10px;
+$sp-v-s-mobile: $sp-v-mobile * 2;
+$sp-v-m-mobile: $sp-v-mobile * 3;
+$sp-v-h-mobile: $sp-v-mobile * 4;
+$sp-v-l-mobile: $sp-v-mobile * 5;

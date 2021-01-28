@@ -2,10 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>JamCoffee Holdings Limited </title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Spectral:wght@600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="public/css/app.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
     <header>
@@ -15,20 +24,22 @@
             <span></span>
         </div>
         <div class="menu">
-            <ul>
-                <li>Menu item here!</li>
-                <li>Menu item here!</li>
-                <li>Menu item here!</li>
-                <li>Menu item here!</li>
-            </ul>
+            <div class="menu__wrapper">
+                <div class="menu__header">JamCoffee Holdings Limited</div>
+                <ul>
+                    <li><a href="#about-us" rel="nofollow">About us</a></li>
+                    <li><a href="#mission" rel="nofollow">Mission & Vision</a></li>
+                    <li><a href="#contacts" rel="nofollow">Contact us</a></li>
+                </ul>
+            </div>
         </div>
     </header>
     <section class="main-screen background-second">
         <div class="container">
             <div class="main-screen__wrapper">
-                <div>JamCoffee Holdings Limited</div>
-                <img src="images/template/logo.svg" alt="" title="">
-                <div class="main-screen__scroll">
+                <div class="main-screen__header">JamCoffee Holdings Limited</div>
+                <img src="images/template/logo.svg" class="main-screen__logo" alt="" title="">
+                <div class="main-screen__scroll scroller" data-scroll-to="#about-us" data-offset="padding-top">
                     Scroll down
                     <span class="animated-down">
                         <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,29 +52,29 @@
     </section>
     <section class="about-us">
         <div class="container">
-            <div class="separator">
-                <img class="banner-image" src="images/template/1.jpg" alt="" title="">
-                <h1>About us</h1>
-                <div class="subtitle">
+            <div class="separator" id="about-us">
+                <img class="banner-image animated_scroll" src="images/template/1.jpg" alt="" title="">
+                <h1 class="animated_scroll scroller-self">About us</h1>
+                <div class="subtitle" id="about-us-content">
                     JamCoffee Holdings Limited is a privately funded investor focusing on long-term investments in the Jamaican Specialty Coffee Segment.
                 </div>
             </div>
             <div class="separator">
                 <h3>Our areas of activities are:</h3>
                 <div class="numbers">
-                    <div class="numbers__item">
+                    <div class="numbers__item animated_scroll">
                         <div class="numbers__number subtitle">1</div>
                         <div class="numbers__text">Equity Investments</div>
                     </div>
-                    <div class="numbers__item">
+                    <div class="numbers__item animated_scroll">
                         <div class="numbers__number subtitle">2</div>
                         <div class="numbers__text">Active participation as shareholder in portfolio companies</div>
                     </div>
-                    <div class="numbers__item">
+                    <div class="numbers__item animated_scroll">
                         <div class="numbers__number subtitle">3</div>
                         <div class="numbers__text">Consulting projects (strategy, sales and marketing)</div>
                     </div>
-                    <div class="numbers__item">
+                    <div class="numbers__item animated_scroll">
                         <div class="numbers__number subtitle">4</div>
                         <div class="numbers__text">and M&A for portfolio companies</div>
                     </div>
@@ -74,23 +85,23 @@
                     companies in the following
                     segments of the Jamaican Specialty Coffee Business:</h3>
                 <div class="numbers">
-                    <div class="numbers__item">
+                    <div class="numbers__item animated_scroll">
                         <div class="numbers__number subtitle">1</div>
                         <div class="numbers__text">Coffee Growers</div>
                     </div>
-                    <div class="numbers__item">
+                    <div class="numbers__item animated_scroll">
                         <div class="numbers__number subtitle">2</div>
                         <div class="numbers__text">Coffee Works Facilities</div>
                     </div>
-                    <div class="numbers__item">
+                    <div class="numbers__item animated_scroll">
                         <div class="numbers__number subtitle">3</div>
                         <div class="numbers__text">Coffee Roasters</div>
                     </div>
-                    <div class="numbers__item">
+                    <div class="numbers__item animated_scroll">
                         <div class="numbers__number subtitle">4</div>
                         <div class="numbers__text">Coffee Exporters</div>
                     </div>
-                    <div class="numbers__item">
+                    <div class="numbers__item animated_scroll">
                         <div class="numbers__number subtitle">5</div>
                         <div class="numbers__text">Other coffee related projects </div>
                     </div>
@@ -100,9 +111,9 @@
     </section>
     <section class="mission background-second">
         <div class="container">
-            <div class="separator">
-                <img class="banner-image" src="images/template/2.jpg" alt="" title="">
-                <h2>Mission</h2>
+            <div class="separator" id="mission">
+                <img class="banner-image animated_scroll" src="images/template/2.jpg" alt="" title="">
+                <h2 class="scroller-self animated_scroll">Mission</h2>
                 <div class="subtitle">
                     JamCoffee Holdings is targeting coffee dealers, coffee works facilities and operators focusing on coffee products.
                 </div>
@@ -117,7 +128,7 @@
     <section class="vision">
         <div class="container">
             <div class="separator">
-                <h2>Vision</h2>
+                <h2 class="scroller-self animated_scroll">Vision</h2>
                 <div class="subtitle mb-m">
                     JamCoffee Holdings aims to be the key privately funded investor for the Jamaican Specialty Coffee segment.
                 </div>
@@ -129,9 +140,9 @@
     </section>
     <section class="contacts background-second">
         <div class="container">
-            <div class="separator">
-                <img class="banner-image" src="images/template/3.jpg" alt="" title="">
-                <h2>Contact us</h2>
+            <div class="separator" id="contacts">
+                <img class="banner-image animated_scroll" src="images/template/3.jpg" alt="" title="">
+                <h2 class="scroller-self animated_scroll">Contact us</h2>
                 <div class="subtitle">
                     New Horizon Building, Ground Floor, 3 ½ Miles Philip S.W. Goldson Highway, Belize City, Belize<br><br>
                     <a href="mailto:info@jamcoffee-holdings.com">info@jamcoffee-holdings.com</a>
@@ -144,8 +155,10 @@
         </div>
     </section>
     <footer>
-        <div class="copyright">
-            2021 © JamCoffee Holdings Limited. All rights reserved
+        <div class="container">
+            <div class="copyright">
+                2021 © JamCoffee Holdings Limited. All rights reserved
+            </div>
         </div>
     </footer>
 <!--    <div class="background">

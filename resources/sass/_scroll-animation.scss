@@ -1,0 +1,13 @@
+.banner-image.animated_scroll.scrolled {
+  opacity: 1;
+}
+
+h1, h2 {
+  &.animated_scroll.scrolled {
+    left: 0;
+  }
+}
+
+.numbers__item.scrolled, .numbers__item.scrolled:nth-of-type(even) {
+  opacity: 1;
+}

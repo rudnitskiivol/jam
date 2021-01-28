@@ -9,7 +9,10 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding: 40px 0;
+    padding: $sp-v-s 0;
+  }
+  &__header {
+    text-align: center;
   }
   &__scroll {
     cursor: pointer;
@@ -27,6 +30,9 @@
         animation: unset;
       }
     }
+  }
+  &__logo {
+    padding: 0 $container-padding;
   }
 }
 
@@ -47,28 +53,55 @@
   &__phone a {
     margin-top: $sp-v-m;
     color: $sub-color;
-    transition: color 0.6s ease-in-out 0.1s;
+    transition: all 0.6s ease-in-out 0.1s;
     opacity: 1;
     &:after {
-      background: none repeat scroll 0 0 transparent;
-      bottom: 0;
-      content: "";
-      display: block;
-      height: 3px;
-      width: 0;
-      left: 50%;
-      position: absolute;
-      background: $sub-color;
-      transition: width 0.6s ease 0s, left 0.6s ease 0s, background-color 0.6s ease-in-out 0.1s;
+      display: none;
     }
     &:hover {
       opacity: 1;
+      text-shadow: 1px 1px 5px $prime-color;
+      transform: scale(1.05);
       color: $text-color;
-      &:after {
-        background-color: $text-color;
-        width: 100%;
-        left: 0%;
-      }
     }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main-screen {
+    &__wrapper {
+      padding: $sp-v-s-tablet 0;
+    }
+    &__logo {
+      padding: 0 $container-padding-tablet;
+    }
+    &__header {
+      padding: 0 $sp-v-m-tablet;
+    }
+  }
+  .contacts {
+    &__phone a {
+      margin-top: $sp-v-m-tablet;
+    }
+  }
+  .trigger {
+    right: 20px;
+    top: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main-screen {
+    &__wrapper {
+      padding: $sp-v-s-mobile 0 $sp-v-s-mobile+5;
+    }
+  }
+  .contacts {
+    &__phone a {
+      margin-top: $sp-v-m-mobile;
+    }
+  }
+  #about-us h1 {
+    margin-bottom: $sp-v-mobile * 3.5;
   }
 }
