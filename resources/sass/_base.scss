@@ -41,10 +41,6 @@ body {
   }
 }
 
-.mb-m {
-  margin-bottom: $sp-v-m;
-}
-
 .subtitle a {
   color: $prime-color;
   text-decoration: none;
@@ -152,6 +148,9 @@ h3, h4, h5, h6 {
   font-weight: 600;
   color: $sub-color;
   padding: 0px $sp-v * 2.5;
+  &:not(:first-of-type) {
+    margin-top: $sp-v-m;
+  }
 }
 
 .banner-image {
