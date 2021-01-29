@@ -2,29 +2,10 @@ body {
   background-color: $background-color;
   font-family: 'Space Mono', monospace;
   font-style: normal;
+  color: $text-color;
   font-weight: normal;
   font-size: $font-size;
   line-height: $line-height;
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #427B58;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #93AD2B;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #795C5C;
 }
 
 .container {
@@ -116,7 +97,7 @@ h1, h2 {
   }
   &:before {
     content: "";
-    background-image: url(/public/images/heading-arrow.svg?24deeaa…);
+    background-image: url("../../images/template/heading-arrow.svg");
     background-repeat: no-repeat;
     background-position: center;
     width: 65px;
